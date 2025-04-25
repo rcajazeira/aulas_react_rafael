@@ -1,0 +1,7 @@
+{
+  "name": "aulas_react_rafael",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "custom"
+}

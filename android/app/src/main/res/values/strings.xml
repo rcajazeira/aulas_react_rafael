@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">aulas_react_rafael</string>
+    <string name="title_activity_main">aulas_react_rafael</string>
+    <string name="package_name">com.aulas_react_rafael</string>
+    <string name="custom_url_scheme">com.aulas_react_rafael</string>
+</resources>
