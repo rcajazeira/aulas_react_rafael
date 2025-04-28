@@ -5,29 +5,26 @@ import { useState, useEffect  } from "react";
 import styles from "./index.module.css";
 
 export default function Index() {
-  const [movies, setMovies] = useState([])
+  const [produtos, setProdutos] = useState([])
   
-  async function getMovieData() {
-    const response = await fetch("https://www.freetestapi.com/api/v1/movies")
+  async function getProdutoData() {
+    const response = await fetch("http://localhost:3001/produtos")
     const data = await response.json()
-    setMovies(data)
+    setProdutos(data)
   }
-  useEffect(() => getMovieData, [])
+  useEffect(() => getProdutoData, [])
   return (
     <>
-      <div className={styles.movieGrid}>
-        {movies.map((movie) => {
+      <div>
+        {produtos.map((produto)=>{
           return (
-            <Movie
-              key={movie.id}
-              title={movie.title}
-              year={movie.year}
-              poster={movie.poster}
-              genres={movie.genre}
-              rating={movie.rating}
-            />
+            <div key={produto.id}>
+              <h2>{produto.nome}</h2>
+              <p>{produto.descricacao}</p>
+              <span>{produto.preco}</span>
+            </div>
           )
-        })} 
+        })}
       </div>
     </>
   )
